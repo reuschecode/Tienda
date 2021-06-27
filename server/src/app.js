@@ -15,6 +15,7 @@ initialSetup();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/public',express.static('public'))
 app.use(cors());
 app.set('port', process.env.PORT || 3001);
 
